@@ -88,20 +88,24 @@ const Blog = () => {
         </Card>
       ))}
       <div className="pagination-controls flex justify-between mt-4">
-        <button
-          onClick={() => handlePageChange(page - 1)}
-          disabled={page === 1}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-300"
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => handlePageChange(page + 1)}
-          disabled={page >= totalPages}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-300"
-        >
-          Next
-        </button>
+        <div className="w-32 md:w-40">
+          <button
+            onClick={() => handlePageChange(page - 1)}
+            disabled={page === 1}
+            className="bg-blue-500 flex-shrink-0 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-300 w-full"
+          >
+            Previous
+          </button>
+        </div>
+        <div className="w-32 md:w-40">
+          <button
+            onClick={() => handlePageChange(page + 1)}
+            disabled={page >= totalPages}
+            className="bg-blue-500 flex-shrink-0 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-300 w-full"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
