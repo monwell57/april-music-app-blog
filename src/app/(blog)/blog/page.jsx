@@ -5,7 +5,7 @@ import Link from "next/link";
 import { client, urlFor } from "../../../lib/sanity";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card, CardContent } from "../../components/ui/Card";
 
 export const revalidate = 30;
 
